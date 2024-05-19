@@ -61,7 +61,7 @@ const HomePage = () => {
           ))}
         </Row>
       )}
-      {pagination}
+      <div className=" d-flex justify-content-center ">{pagination}</div>
     </Container>
   );
 };

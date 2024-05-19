@@ -74,27 +74,30 @@ const HomePage = () => {
           ))}
         </Row>
       )}
-      {pages !== 1 ? (
-        <ReactPaginate
-          breakLabel="..."
-          nextLabel="Next"
-          previousLabel="Previous"
-          pageClassName="page-item"
-          pageLinkClassName="page-link"
-          previousClassName="page-item"
-          previousLinkClassName="page-link"
-          nextClassName="page-item"
-          nextLinkClassName="page-link"
-          breakClassName="page-item"
-          breakLinkClassName="page-link"
-          containerClassName="pagination"
-          activeClassName="active"
-          pageRangeDisplayed={5}
-          pageCount={pages}
-          renderOnZeroPageCount={null}
-          onPageChange={handlePageClick}
-        />
-      ) : null}
+
+      <div>
+        {pages !== 1 ? (
+          <ReactPaginate
+            breakLabel="..."
+            nextLabel="Next"
+            previousLabel="Previous"
+            pageClassName="page-item"
+            pageLinkClassName="page-link"
+            previousClassName="page-item"
+            previousLinkClassName="page-link"
+            nextClassName="page-item"
+            nextLinkClassName="page-link"
+            breakClassName="page-item"
+            breakLinkClassName="page-link"
+            containerClassName="pagination"
+            activeClassName="active"
+            pageRangeDisplayed={5}
+            pageCount={pages}
+            renderOnZeroPageCount={null}
+            onPageChange={handlePageClick}
+          />
+        ) : null}
+      </div>
     </Container>
   );
 };

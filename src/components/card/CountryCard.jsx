@@ -5,13 +5,23 @@ import PropTypes from "prop-types";
 const CountryCard = ({ name, population, region, capital, image }) => {
   return (
     <Card>
-      <Card.Img variant="top" src={image} />
+      <Card.Img variant="top" height={150} src={image} />
       <Card.Body>
         <Card.Title>{name}</Card.Title>
-        <Card.Text>Population: {population}</Card.Text>
-        <Card.Text>Region: {region}</Card.Text>
-        <Card.Text>Capital: {capital}</Card.Text>
-        <Link to={`country/${name}`}>See more</Link>
+        <Card.Text>
+          <span className="fw-bold">Population</span>: {population}
+        </Card.Text>
+        <Card.Text>
+          {" "}
+          <span className="fw-bold">Region</span>: {region}
+        </Card.Text>
+        <Card.Text>
+          {" "}
+          <span className="fw-bold">Capital:</span> {capital}
+        </Card.Text>
+        <Link className="btn btn-primary w-100" to={`country/${name}`}>
+          See more
+        </Link>
       </Card.Body>
     </Card>
   );

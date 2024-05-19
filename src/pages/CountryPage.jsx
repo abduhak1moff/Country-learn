@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import { useParams } from "react-router-dom";
 import Loading from "../components/shares/Loading";
 import { Alert } from "react-bootstrap";
@@ -16,10 +15,15 @@ const CountryPage = () => {
       {loading ? (
         <Loading />
       ) : (
-        <Fragment>
-          <h1>{country?.name?.official}</h1>
-          <p>Languages: {Object.values(country?.languages || {})}</p>
-        </Fragment>
+        <div className="d-flex gap-5 flex-wrap align-items-center justify-content-center min-vh-100">
+          <div>
+            <img src={country?.flags?.png} alt="" />
+          </div>
+          <div>
+            <h1>{country?.name?.official}</h1>
+            <p>Languages: {Object.values(country?.languages || {})}</p>
+          </div>
+        </div>
       )}
     </div>
   );
